@@ -12,6 +12,9 @@ body {
 
 header {
   text-align: center;
+  margin-top: 15vh;
+  margin-bottom: 40px;
+  font-size: 2em;
 }
 
 .main {
@@ -43,16 +46,21 @@ header {
   font-size: 1.2em;
   width: 100%;
   height: 100%;
-  background: #f7f4f4;
+  background: white;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px;
   border-radius: 10px;
-  -webkit-box-shadow: inset 10px -10px 10px #582d2d;
-          box-shadow: inset 10px -10px 10px #582d2d;
-  -webkit-box-shadow: inset 10px -white 10px #f8efef;
-          box-shadow: inset 10px -white 10px #f8efef;
+  -webkit-box-shadow: inset 10px -10px 10px #424141;
+          box-shadow: inset 10px -10px 10px #424141;
+  -webkit-box-shadow: inset 2px 2px 5px #525151;
+          box-shadow: inset 2px 2px 5px #525151;
+}
+
+.main .kurssit p {
+  color: #f70909;
+  font-weight: 600;
 }
 
 .main .valinta-btn {
@@ -68,18 +76,49 @@ header {
           justify-content: flex-start;
 }
 
+.main .valinta-btn h4 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
 .main .valinta-btn button {
+  margin: auto;
   width: 50px;
   height: 50px;
   margin-top: 20px;
   border-radius: 10px;
   background: #d6d6d6;
-  -webkit-box-shadow: -10px 10px 30px #b6b6b6, 10px -10px 30px #f6f6f6;
-          box-shadow: -10px 10px 30px #b6b6b6, 10px -10px 30px #f6f6f6;
+  -webkit-box-shadow: -10px 10px 10px #b6b6b6, 10px -10px 10px #f6f6f6;
+          box-shadow: -10px 10px 10px #b6b6b6, 10px -10px 10px #f6f6f6;
   border: 0;
+  background: white;
+  color: #5844c7;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.main .valinta-btn button .fas {
+  color: #5844c7;
+  font-weight: 600;
 }
 
 .vaihto {
   text-align: center;
+  margin-top: 40px;
+  font-size: 1.5em;
+  line-height: 2;
+  font-weight: 600;
+}
+
+.vaihto input {
+  height: 35px;
+  width: 100px;
+  border: 0;
+  background: white;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 10px -10px 10px #424141;
+          box-shadow: inset 10px -10px 10px #424141;
+  -webkit-box-shadow: inset 2px 2px 5px #525151;
+          box-shadow: inset 2px 2px 5px #525151;
 }
 /*# sourceMappingURL=style.css.map */

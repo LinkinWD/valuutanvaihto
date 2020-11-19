@@ -1,15 +1,19 @@
 $taustaValkoinen: #d6d6d6;
-
+$myblue: rgb(88, 68, 199);
 @mixin neoVarjo {
 	border-radius: 10px;
 	background: #d6d6d6;
-	box-shadow: -10px 10px 30px #b6b6b6, 10px -10px 30px #f6f6f6;
+	box-shadow: -10px 10px 10px #b6b6b6, 10px -10px 10px #f6f6f6;
 }
 
 @mixin flexit {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+}
+@mixin innershadow {
+	box-shadow: inset 10px -10px 10px #424141;
+	box-shadow: inset 2px 2px 5px #525151;
 }
 
 * {
@@ -25,6 +29,9 @@ body {
 
 header {
 	text-align: center;
+	margin-top: 15vh;
+	margin-bottom: 40px;
+	font-size: 2em;
 }
 
 .main {
@@ -39,24 +46,53 @@ header {
 		font-size: 1.2em;
 		width: 100%;
 		height: 100%;
-		background: rgb(247, 244, 244);
+		background: rgb(255, 255, 255);
 		justify-content: space-between;
 		padding: 10px;
 		border-radius: 10px;
-		box-shadow: inset 10px -10px 10px #582d2d;
-		box-shadow: inset 10px -white 10px #f8efef;
+		@include innershadow();
+		p {
+			color: rgb(247, 9, 9);
+			font-weight: 600;
+		}
 	}
 	.valinta-btn {
-		@include flexit() button {
+		h4 {
+			text-align: center;
+			font-size: 1.5em;
+		}
+		@include flexit();
+		button {
+			margin: auto;
 			width: 50px;
 			height: 50px;
 			margin-top: 20px;
 			@include neoVarjo();
 			border: 0;
+			background: white;
+			color: $myblue;
+			font-weight: 600;
+			font-size: 1.2em;
+			.fas {
+				color: $myblue;
+				font-weight: 600;
+			}
 		}
 	}
 }
 
 .vaihto {
 	text-align: center;
+	margin-top: 40px;
+	font-size: 1.5em;
+	line-height: 2;
+	font-weight: 600;
+	input {
+		height: 35px;
+		width: 100px;
+		border: 0;
+		background: white;
+		border-radius: 10px;
+		@include innershadow();
+	}
 }
