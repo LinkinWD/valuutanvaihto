@@ -1,0 +1,62 @@
+$taustaValkoinen: #d6d6d6;
+
+@mixin neoVarjo {
+	border-radius: 10px;
+	background: #d6d6d6;
+	box-shadow: -10px 10px 30px #b6b6b6, 10px -10px 30px #f6f6f6;
+}
+
+@mixin flexit {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+* {
+	padding: 0%;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100%;
+}
+
+header {
+	text-align: center;
+}
+
+.main {
+	width: 100vw;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: 100px 1fr 1fr 100px;
+	grid-gap: 40px;
+	.kurssit {
+		@include flexit();
+		font-size: 1.2em;
+		width: 100%;
+		height: 100%;
+		background: rgb(247, 244, 244);
+		justify-content: space-between;
+		padding: 10px;
+		border-radius: 10px;
+		box-shadow: inset 10px -10px 10px #582d2d;
+		box-shadow: inset 10px -white 10px #f8efef;
+	}
+	.valinta-btn {
+		@include flexit() button {
+			width: 50px;
+			height: 50px;
+			margin-top: 20px;
+			@include neoVarjo();
+			border: 0;
+		}
+	}
+}
+
+.vaihto {
+	text-align: center;
+}
