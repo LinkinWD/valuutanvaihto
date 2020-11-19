@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>converter</title>
+    <script src="https://kit.fontawesome.com/3728b5825f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <header>
+        <h1>Valuuttalaskuri</h1>
+    </header>
+    <section>
+        <div class="main">
+            <div class="kurssit">
+            <h4>Kurssit tänään euroon verraatuna</h4>
+            <p id="USA">USA Dollari</p>
+            <p id="AUD">Austraalian Dollari</p>
+            <p id="RUB">Venäjän Rupla</p>
+            <p id="SEK">Ruotsin Kruunu</p>
+            <p id="GBP">Englannin Punta</p>
+        </div>
+        <div class="valinta-btn">
+            <h4>Valitse vaihdettava valuutta</h4>
+            <button data-id-USA>U<i class="fas fa-dollar-sign"></i></button>
+            <button data-id-AUD>A<i class="fas fa-dollar-sign"></i></button>
+            <button data-id-RUB><i class="fas fa-ruble-sign"></i></button>
+            <button data-id-SEK><i class="fas fa-crown"></i></button>
+            <button data-id-GBP><i class="fas fa-pound-sign"></i></button>
+        </div>
+
+        </div>
+        
+        
+        <div class="vaihto">
+            <h4>Muutatko euroja valitsemaksesi valuutaksi?</h4>
+            <form action="">
+                <label for="vaihdettava">Paljonko haluaisit vaihtaa?</label>
+                <input type="number" id="vaihdettava" name="vaihdettava">
+
+            </form>
+        </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
 </body>
