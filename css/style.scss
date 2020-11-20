@@ -1,19 +1,21 @@
-$taustaValkoinen: #d6d6d6;
+$taustaValkoinen: #efeeee;
 $myblue: rgb(88, 68, 199);
 @mixin neoVarjo {
 	border-radius: 10px;
 	background: #d6d6d6;
-	box-shadow: -10px 10px 10px #b6b6b6, 10px -10px 10px #f6f6f6;
+	box-shadow: -5px -5px 10px #f1f1f1, 5px 5px 10px #a8a5a5;
 }
 
 @mixin flexit {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 @mixin innershadow {
-	box-shadow: inset 10px -10px 10px #424141;
-	box-shadow: inset 2px 2px 5px #525151;
+	box-shadow: inset -10px -10px 20px #424141;
+	box-shadow: inset 2px 2px 15px #dbd8d8;
 }
 
 * {
@@ -25,56 +27,63 @@ $myblue: rgb(88, 68, 199);
 body {
 	height: 100vh;
 	width: 100%;
+	font-family: sans-serif;
 }
 
 header {
 	text-align: center;
-	margin-top: 15vh;
-	margin-bottom: 40px;
-	font-size: 2em;
+	margin-top: 5vh;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	width: 60vw;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border-radius: 15px;
+	box-shadow: -6px, -6px, 16px rgba(255, 255, 225, 0.83);
+	box-shadow: 6px 6px 16px rgba(217, 210, 200, 0.71);
+	font-size: .8em;
+	color: rgb(187, 20, 187);
 }
 
-.main {
+section {
+	@include flexit();
 	width: 100vw;
-	display: grid;
-	justify-content: center;
-	align-items: center;
-	grid-template-columns: 100px 1fr 1fr 100px;
-	grid-gap: 40px;
+}
+.main {
+	border-radius: 50%;
 	.kurssit {
 		@include flexit();
 		font-size: 1.2em;
-		width: 100%;
-		height: 100%;
+		width: 300px;
+		height: 300px;
+		border-radius: 50%;
+
 		background: rgb(255, 255, 255);
-		justify-content: space-between;
-		padding: 10px;
-		border-radius: 10px;
+
 		@include innershadow();
 		p {
-			color: rgb(247, 9, 9);
+			color: #ff073a;
 			font-weight: 600;
 		}
 	}
 	.valinta-btn {
-		h4 {
-			text-align: center;
-			font-size: 1.5em;
-		}
-		@include flexit();
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
 		button {
 			margin: auto;
 			width: 50px;
 			height: 50px;
-			margin-top: 20px;
+
 			@include neoVarjo();
 			border: 0;
 			background: white;
-			color: $myblue;
+			color: rgb(187, 20, 187);
 			font-weight: 600;
 			font-size: 1.2em;
 			.fas {
-				color: $myblue;
+				color: rgb(187, 20, 187);
 				font-weight: 600;
 			}
 		}
@@ -87,6 +96,13 @@ header {
 	font-size: 1.5em;
 	line-height: 2;
 	font-weight: 600;
+	border-radius: 20px;
+	margin: 30px;
+	padding: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: -6px, -6px, 26px rgba(255, 255, 225, 0.83);
+	box-shadow: 6px 6px 16px rgba(217, 210, 200, 0.51);
+	color: #ff073a;
 	input {
 		height: 35px;
 		width: 100px;
@@ -94,5 +110,7 @@ header {
 		background: white;
 		border-radius: 10px;
 		@include innershadow();
+		font-size: 30px;
+		color: #ff073a;
 	}
 }

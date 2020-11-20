@@ -8,28 +8,47 @@
 body {
   height: 100vh;
   width: 100%;
+  font-family: sans-serif;
 }
 
 header {
   text-align: center;
-  margin-top: 15vh;
-  margin-bottom: 40px;
-  font-size: 2em;
+  margin-top: 5vh;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 60vw;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  -webkit-box-shadow: -6px, -6px, 16px rgba(255, 255, 225, 0.83);
+          box-shadow: -6px, -6px, 16px rgba(255, 255, 225, 0.83);
+  -webkit-box-shadow: 6px 6px 16px rgba(217, 210, 200, 0.71);
+          box-shadow: 6px 6px 16px rgba(217, 210, 200, 0.71);
+  font-size: .8em;
+  color: #bb14bb;
 }
 
-.main {
-  width: 100vw;
-  display: -ms-grid;
-  display: grid;
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-columns: 100px 1fr 1fr 100px;
-      grid-template-columns: 100px 1fr 1fr 100px;
-  grid-gap: 40px;
+  text-align: center;
+  width: 100vw;
+}
+
+.main {
+  border-radius: 50%;
 }
 
 .main .kurssit {
@@ -40,65 +59,54 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
   font-size: 1.2em;
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
   background: white;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: inset 10px -10px 10px #424141;
-          box-shadow: inset 10px -10px 10px #424141;
-  -webkit-box-shadow: inset 2px 2px 5px #525151;
-          box-shadow: inset 2px 2px 5px #525151;
+  -webkit-box-shadow: inset -10px -10px 20px #424141;
+          box-shadow: inset -10px -10px 20px #424141;
+  -webkit-box-shadow: inset 2px 2px 15px #dbd8d8;
+          box-shadow: inset 2px 2px 15px #dbd8d8;
 }
 
 .main .kurssit p {
-  color: #f70909;
+  color: #ff073a;
   font-weight: 600;
 }
 
 .main .valinta-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.main .valinta-btn h4 {
-  text-align: center;
-  font-size: 1.5em;
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
 }
 
 .main .valinta-btn button {
   margin: auto;
   width: 50px;
   height: 50px;
-  margin-top: 20px;
   border-radius: 10px;
   background: #d6d6d6;
-  -webkit-box-shadow: -10px 10px 10px #b6b6b6, 10px -10px 10px #f6f6f6;
-          box-shadow: -10px 10px 10px #b6b6b6, 10px -10px 10px #f6f6f6;
+  -webkit-box-shadow: -5px -5px 10px #f1f1f1, 5px 5px 10px #a8a5a5;
+          box-shadow: -5px -5px 10px #f1f1f1, 5px 5px 10px #a8a5a5;
   border: 0;
   background: white;
-  color: #5844c7;
+  color: #bb14bb;
   font-weight: 600;
   font-size: 1.2em;
 }
 
 .main .valinta-btn button .fas {
-  color: #5844c7;
+  color: #bb14bb;
   font-weight: 600;
 }
 
@@ -108,6 +116,15 @@ header {
   font-size: 1.5em;
   line-height: 2;
   font-weight: 600;
+  border-radius: 20px;
+  margin: 30px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -6px, -6px, 26px rgba(255, 255, 225, 0.83);
+          box-shadow: -6px, -6px, 26px rgba(255, 255, 225, 0.83);
+  -webkit-box-shadow: 6px 6px 16px rgba(217, 210, 200, 0.51);
+          box-shadow: 6px 6px 16px rgba(217, 210, 200, 0.51);
+  color: #ff073a;
 }
 
 .vaihto input {
@@ -116,9 +133,11 @@ header {
   border: 0;
   background: white;
   border-radius: 10px;
-  -webkit-box-shadow: inset 10px -10px 10px #424141;
-          box-shadow: inset 10px -10px 10px #424141;
-  -webkit-box-shadow: inset 2px 2px 5px #525151;
-          box-shadow: inset 2px 2px 5px #525151;
+  -webkit-box-shadow: inset -10px -10px 20px #424141;
+          box-shadow: inset -10px -10px 20px #424141;
+  -webkit-box-shadow: inset 2px 2px 15px #dbd8d8;
+          box-shadow: inset 2px 2px 15px #dbd8d8;
+  font-size: 30px;
+  color: #ff073a;
 }
 /*# sourceMappingURL=style.css.map */
