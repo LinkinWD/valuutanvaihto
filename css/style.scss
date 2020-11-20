@@ -1,9 +1,9 @@
-$taustaValkoinen: #efeeee;
+$taustaValkoinen: #fdffff;
 $myblue: rgb(88, 68, 199);
 @mixin neoVarjo {
 	border-radius: 10px;
 	background: #d6d6d6;
-	box-shadow: -5px -5px 10px #f1f1f1, 5px 5px 10px #a8a5a5;
+	box-shadow: -2px -2px 5px #f1e9e9, 5px 5px 10px #e0dede;
 }
 
 @mixin flexit {
@@ -14,8 +14,8 @@ $myblue: rgb(88, 68, 199);
 	text-align: center;
 }
 @mixin innershadow {
-	box-shadow: inset -10px -10px 20px #424141;
-	box-shadow: inset 2px 2px 15px #dbd8d8;
+	box-shadow: inset -3px -3px 5px #242323;
+	box-shadow: inset 2px 2px 10px #c4bbbb;
 }
 
 * {
@@ -28,6 +28,7 @@ body {
 	height: 100vh;
 	width: 100%;
 	font-family: sans-serif;
+	background: $taustaValkoinen;
 }
 
 header {
@@ -43,7 +44,8 @@ header {
 	box-shadow: -6px, -6px, 16px rgba(255, 255, 225, 0.83);
 	box-shadow: 6px 6px 16px rgba(217, 210, 200, 0.71);
 	font-size: .8em;
-	color: rgb(187, 20, 187);
+	color: #250fee;
+	text-transform: uppercase;
 }
 
 section {
@@ -58,12 +60,10 @@ section {
 		width: 300px;
 		height: 300px;
 		border-radius: 50%;
-
+		color: #c2259b;
 		background: rgb(255, 255, 255);
-
 		@include innershadow();
-		p {
-			color: #ff073a;
+		:nth-child(1) {
 			font-weight: 600;
 		}
 	}
@@ -75,17 +75,21 @@ section {
 			margin: auto;
 			width: 50px;
 			height: 50px;
-
+			outline: none;
 			@include neoVarjo();
 			border: 0;
 			background: white;
-			color: rgb(187, 20, 187);
+			color: #250fee;
 			font-weight: 600;
 			font-size: 1.2em;
+			border: 0;
 			.fas {
-				color: rgb(187, 20, 187);
+				color: #250fee;
 				font-weight: 600;
 			}
+		}
+		button:focus {
+			background: black;
 		}
 	}
 }
@@ -93,24 +97,34 @@ section {
 .vaihto {
 	text-align: center;
 	margin-top: 40px;
-	font-size: 1.5em;
-	line-height: 2;
+	font-size: 1.1em;
+	line-height: 1.4;
 	font-weight: 600;
 	border-radius: 20px;
 	margin: 30px;
 	padding: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	box-shadow: -6px, -6px, 26px rgba(255, 255, 225, 0.83);
-	box-shadow: 6px 6px 16px rgba(217, 210, 200, 0.51);
-	color: #ff073a;
-	input {
-		height: 35px;
-		width: 100px;
+	box-shadow: -3px, -3px, 2px rgba(255, 255, 225, 0.83);
+	box-shadow: 3px 3px 6px rgba(217, 210, 200, 0.51);
+	color: #c2259b;
+	input[type=number] {
 		border: 0;
 		background: white;
 		border-radius: 10px;
-		@include innershadow();
-		font-size: 30px;
-		color: #ff073a;
+		box-shadow: inset -3px -3px 2px #242323;
+		box-shadow: inset 2px 2px 5px #c4bbbb;
+		font-size: 1.2em;
+		padding: 5px;
+		color: #c2259b;
+		outline: none;
+		height: 25px;
+		width: 100px;
+		transition: ease-in-out, all .35s ease-in-out;
 	}
+}
+
+input[type=number]:focus {
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	width: 250px;
+	height: 35px;
 }
