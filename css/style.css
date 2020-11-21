@@ -7,9 +7,8 @@
 
 body {
   height: 100vh;
-  width: 100%;
-  font-family: sans-serif;
-  background: #fdffff;
+  width: 100vw;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -17,17 +16,19 @@ header {
   margin-top: 5vh;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px;
-  width: 60vw;
+  width: 60%;
   margin: auto;
   margin-bottom: 20px;
   margin-top: 20px;
   border-radius: 15px;
-  -webkit-box-shadow: -6px, -6px, 16px rgba(255, 255, 225, 0.83);
-          box-shadow: -6px, -6px, 16px rgba(255, 255, 225, 0.83);
-  -webkit-box-shadow: 6px 6px 16px rgba(217, 210, 200, 0.71);
-          box-shadow: 6px 6px 16px rgba(217, 210, 200, 0.71);
+  border-radius: 20px;
+  background: #fdffff;
+  -webkit-box-shadow: -3px -3px 5px #242323;
+          box-shadow: -3px -3px 5px #242323;
+  -webkit-box-shadow: 2px 2px 10px #c4bbbb;
+          box-shadow: 2px 2px 10px #c4bbbb;
   font-size: .8em;
-  color: #250fee;
+  color: #f4c559;
   text-transform: uppercase;
 }
 
@@ -46,11 +47,30 @@ section {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  width: 100vw;
+  width: 100%;
+  background: #fdffff;
+  border: 15px solid #fdffff;
+  border-radius: 40px;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .main {
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 .main .kurssit {
@@ -72,7 +92,7 @@ section {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  color: #c2259b;
+  color: #f9df90;
   background: white;
   -webkit-box-shadow: inset -3px -3px 5px #242323;
           box-shadow: inset -3px -3px 5px #242323;
@@ -82,14 +102,40 @@ section {
 
 .main .kurssit :nth-child(1) {
   font-weight: 600;
+  color: #bcb4d0;
+}
+
+.main .kurssit span {
+  color: #bcb4d0;
+}
+
+.main hr {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100px;
+  height: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset -3px -3px 5px #242323;
+          box-shadow: inset -3px -3px 5px #242323;
+  -webkit-box-shadow: inset 2px 2px 10px #c4bbbb;
+          box-shadow: inset 2px 2px 10px #c4bbbb;
 }
 
 .main .valinta-btn {
-  margin-top: 30px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  border: 2px solid #fdffff;
+  border-radius: 20px;
+  background: #fdffff;
+  -webkit-box-shadow: -3px -3px 5px #242323;
+          box-shadow: -3px -3px 5px #242323;
+  -webkit-box-shadow: 2px 2px 10px #c4bbbb;
+          box-shadow: 2px 2px 10px #c4bbbb;
+  padding: 30px;
 }
 
 .main .valinta-btn button {
@@ -97,25 +143,39 @@ section {
   width: 50px;
   height: 50px;
   outline: none;
+  border-radius: 20px;
+  background: #fdffff;
+  -webkit-box-shadow: -3px -3px 5px #242323;
+          box-shadow: -3px -3px 5px #242323;
+  -webkit-box-shadow: 2px 2px 10px #c4bbbb;
+          box-shadow: 2px 2px 10px #c4bbbb;
   border-radius: 10px;
-  background: #d6d6d6;
-  -webkit-box-shadow: -2px -2px 5px #f1e9e9, 5px 5px 10px #e0dede;
-          box-shadow: -2px -2px 5px #f1e9e9, 5px 5px 10px #e0dede;
+  border-radius: 15px;
   border: 0;
   background: white;
-  color: #250fee;
+  color: #bcb4d0;
   font-weight: 600;
   font-size: 1.2em;
   border: 0;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .main .valinta-btn button .fas {
-  color: #250fee;
+  color: #bcb4d0;
   font-weight: 600;
 }
 
 .main .valinta-btn button:focus {
-  background: black;
+  -webkit-box-shadow: inset -3px -3px 5px #242323;
+          box-shadow: inset -3px -3px 5px #242323;
+  -webkit-box-shadow: inset 2px 2px 10px #c4bbbb;
+          box-shadow: inset 2px 2px 10px #c4bbbb;
+  color: #774fa3;
+}
+
+.main .valinta-btn button:focus .fas {
+  color: #774fa3;
 }
 
 .vaihto {
@@ -123,16 +183,18 @@ section {
   margin-top: 40px;
   font-size: 1.1em;
   line-height: 1.4;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 20px;
   margin: 30px;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: -3px, -3px, 2px rgba(255, 255, 225, 0.83);
-          box-shadow: -3px, -3px, 2px rgba(255, 255, 225, 0.83);
-  -webkit-box-shadow: 3px 3px 6px rgba(217, 210, 200, 0.51);
-          box-shadow: 3px 3px 6px rgba(217, 210, 200, 0.51);
-  color: #c2259b;
+  border-radius: 20px;
+  background: #fdffff;
+  -webkit-box-shadow: -3px -3px 5px #242323;
+          box-shadow: -3px -3px 5px #242323;
+  -webkit-box-shadow: 2px 2px 10px #c4bbbb;
+          box-shadow: 2px 2px 10px #c4bbbb;
+  color: #f4c559;
 }
 
 .vaihto input[type=number] {
@@ -145,12 +207,28 @@ section {
           box-shadow: inset 2px 2px 5px #c4bbbb;
   font-size: 1.2em;
   padding: 5px;
-  color: #c2259b;
+  color: #2a1e59;
   outline: none;
   height: 25px;
   width: 100px;
   -webkit-transition: ease-in-out, all .35s ease-in-out;
   transition: ease-in-out, all .35s ease-in-out;
+  text-align: center;
+}
+
+.vaihto #vaihtoTulos {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 20vw;
+  -webkit-box-shadow: inset -3px -3px 5px #242323;
+          box-shadow: inset -3px -3px 5px #242323;
+  -webkit-box-shadow: inset 2px 2px 10px #c4bbbb;
+          box-shadow: inset 2px 2px 10px #c4bbbb;
+  border-radius: 20px;
+  color: #2a1e59;
 }
 
 input[type=number]:focus {

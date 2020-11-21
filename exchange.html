@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>converter</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3728b5825f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,15 +15,16 @@
     </header>
     <section>
         <div class="main">
-            <div></div>
+            
             <div class="kurssit">
             <p>Kurssit</p>
-            <p>USA Dollari<br><span id="USA"></span> </p>
-            <p>Austraalian Dollari<br><span id="AUD"></span> </p>
-            <p>Venäjän Rupla<br><span id="RUB"></span> </p>
-            <p>Ruotsin Kruunu<br><span id="SEK"></span> </p>
-            <p>Englannin Punta<br><span id="GBP"></span> </p>
+            <p>USA Dollari<br><span id="USA">1.2</span> </p>
+            <p>Austraalian Dollari<br><span id="AUD">1</span> </p>
+            <p>Venäjän Rupla<br><span id="RUB">2</span> </p>
+            <p>Ruotsin Kruunu<br><span id="SEK">3</span> </p>
+            <p>Englannin Punta<br><span id="GBP">2</span> </p>
         </div>
+        <hr>
         <div class="valinta-btn">
            
             <button data-id-USA>U<i class="fas fa-dollar-sign"></i></button>
@@ -30,7 +33,7 @@
             <button data-id-SEK><i class="fas fa-crown"></i></button>
             <button data-id-GBP><i class="fas fa-pound-sign"></i></button>
         </div>
-        <div></div>
+        
         </div>
         
         
@@ -38,12 +41,13 @@
             
             <form action="">
                 <label for="vaihdettava">Paljonko haluaisit vaihtaa?</label>
-                <input type="number" id="vaihdettava" name="vaihdettava" placeholder="€ euroo">
+                <input type="number" id="vaihdettava" name="vaihdettava">
             </form>
-            <p>Saat: <span id="vaihtotulos"></span></p>
+            <p>Saat: </p>
+            <span id="vaihtoTulos">10000€</span>
         </div>
     </section>
-
+    <script src="anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
 </body>
