@@ -15,6 +15,7 @@ let valittu
 let kerroin  
 let tulokset
 let valmisLasku
+let maa 
 
 
 $(document).ready(function() {
@@ -42,23 +43,28 @@ $(document).ready(function() {
 
 btnAud.addEventListener('click', () => {
       valittu = kurssit[7][1]
+      maa = kurssit[7][0]
       console.log(valittu)
-    return valittu
+      console.log(maa)
+    return valittu, maa
   })
 btnUsd.addEventListener('click', () => {
     valittu = kurssit[26][1]
+    maa = kurssit[26][0]
     console.log(valittu)
-  return valittu
+  return valittu, maa
 })
 btnSek.addEventListener('click', () => {
   valittu = kurssit[9][1]
+  maa = kurssit[9][0]
   console.log(valittu)
-return valittu
+return valittu, maa
 })
 btnGbp.addEventListener('click', () => {
   valittu = kurssit[29][1]
+  maa = kurssit[29][0]
   console.log(valittu)
-return valittu
+return valittu, maa
 })
 
   
@@ -69,17 +75,17 @@ $('input').keypress(function(e) {
     let summa=$('input').val();
     console.log(summa)
     if(isNaN(valittu)) {
-      alert('valitse valuutta')
+      alert('Et ole vielä valinnut, miksi valuutaksi haluat eurosi vaihtaa!')
       return false
     }
     valmisLasku = summa * valittu
-    console.log(valmisLasku)
+    let saatuTulos = valmisLasku.toFixed(2)
     anime({
       targets: tulos,
-      value: [0, valmisLasku],    round: 1,
+      innerText: [0, saatuTulos + " " + maa],    round: 1,
       easing: 'easeInOutExpo'
     });
-      
+    $('input').val('')
   }
 });
 })

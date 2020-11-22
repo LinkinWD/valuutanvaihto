@@ -88,7 +88,7 @@ section {
 	}
 	.valinta-btn {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 5px;
 		border: 2px solid $taustaValkoinen;
 		@include neoVarjo();
@@ -151,6 +151,9 @@ section {
 		transition: ease-in-out, all .35s ease-in-out;
 		text-align: center;
 	}
+	form {
+		margin-bottom: 10px;
+	}
 
 	#vaihtoTulos {
 		margin-top: 10px;
@@ -162,6 +165,9 @@ section {
 		@include innershadow();
 		border-radius: 20px;
 		color: #2a1e59;
+	}
+	p {
+		margin-bottom: 15px;
 	}
 }
 
